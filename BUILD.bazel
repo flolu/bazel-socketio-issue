@@ -48,6 +48,7 @@ html_insert_assets(
 ts_devserver(
     name = "live_server",
     entry_module = "bazel_socketio_issue/main.dev",
+    port = 4200,
     scripts = [
         "@npm//:node_modules/tslib/tslib.js",
         ":rxjs_umd_modules",
