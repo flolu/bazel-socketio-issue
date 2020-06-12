@@ -21,12 +21,13 @@
     "rollup": "1.21.4",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-node-resolve": "5.2.0",
+    "shelljs": "^0.8.4",
     "terser": "4.6.11",
     "typescript": "3.8.3"
   },
   "scripts": {
     "dev": "ibazel run //:live_server",
     "prod": "bazelisk run //:prod_server",
-    "postinstall": "ngcc"
+    "postinstall": "node --preserve-symlinks --preserve-symlinks-main ./postinstall-patches.js && ngcc"
   }
 }
